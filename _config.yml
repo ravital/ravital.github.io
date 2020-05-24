@@ -1,2 +1,4 @@
 name: Ravital Solomon
 markdown: kramdown
+
+theme: jekyll-theme-minimal
