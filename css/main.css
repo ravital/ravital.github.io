@@ -46,6 +46,7 @@ table{
     border-collapse: collapse;
     border-spacing: 1px;
     border:1.5px solid #CCCDD1;
+    padding: 0.5px;
 }
 
 th{
