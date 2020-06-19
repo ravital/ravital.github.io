@@ -76,7 +76,7 @@ There a number of different homomorphic encryption schemes (Variety, great!) tha
 |  Computational Model      |   Good for      |    Schemes                                    |  
 | :------------------------:|:-------------:|:------------------------------------------------:|
 |           Boolean         |  Number Comparison  |   TFHE     |
-| Modular Arithmetic        | Integer Arithmetic, Scalar Multiplication   |   BGV, BFV      |
+| Modular Arithmetic        | Integer Arithmetic, Scalar Multiplication   |   &nbsp; BGV, BFV &nbsp;     |
 | &nbsp; Floating Point Arithmetic &nbsp;  |  &nbsp; Polynomial Approximation, Machine Learning Models &nbsp;  |     CKKS          |
 
 **Q: Does it matter which scheme I use if it falls under the same category of computational model? (Does it matter which of BGV and BFV I use?)** 
@@ -120,7 +120,7 @@ If you do not have previous experience with FHE, we recommend starting with a mo
 | :-----------------------------------: |:------------------------------------------------:|
 |                    [Boolean](#Many-Different-Schemes)          |  [TFHE](https://github.com/tfhe/tfhe), [nuFHE](https://github.com/nucypher/nufhe), [PALISADE](https://gitlab.com/palisade/palisade-release)(tFHE)   |
 | [Modular Arithmetic](#Many-Different-Schemes)                  |   [HElib](https://github.com/homenc/HElib), [SEAL](https://github.com/Microsoft/SEAL)(BFV), [Lattigo](https://github.com/ldsec/lattigo)(BFV), [PALISADE](https://gitlab.com/palisade/palisade-release)(BFV, BGV)  |
-| [Floating Point Arithmetic](#Many-Different-Schemes)           |   [SEAL](https://github.com/Microsoft/SEAL)(CKKS), [Lattigo](https://github.com/ldsec/lattigo)(CKKS), [PALISADE](https://gitlab.com/palisade/palisade-release)(CKKS)                                   |
+| &nbsp; [Floating Point Arithmetic](#Many-Different-Schemes) &nbsp;          |  &nbsp;  [SEAL](https://github.com/Microsoft/SEAL)(CKKS), [Lattigo](https://github.com/ldsec/lattigo)(CKKS), [PALISADE](https://gitlab.com/palisade/palisade-release)(CKKS)  &nbsp;                                 |
 
 
 ## References
