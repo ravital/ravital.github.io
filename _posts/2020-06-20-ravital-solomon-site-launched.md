@@ -116,6 +116,7 @@ Wading through libraries like [HElib](https://github.com/homenc/HElib) can be in
 
 If you do not have previous experience with FHE, we recommend starting with a more user-friendly library such as [SEAL](https://github.com/Microsoft/SEAL).
 
+{:class="table table-bordered"}
 |  Computational Model                |      Library                                     |  
 | ----------------------------------- |------------------------------------------------:|
 |                    [Boolean](#Many-Different-Schemes)          |  [TFHE](https://github.com/tfhe/tfhe), [nuFHE](https://github.com/nucypher/nufhe), [PALISADE](https://gitlab.com/palisade/palisade-release)(tFHE)   |
