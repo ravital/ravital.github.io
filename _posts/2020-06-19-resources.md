@@ -6,7 +6,7 @@ date: 2020-06-19
 I've collected some resources if you're interested in learning more about lattice-based cryptography, fully homomorphic encryption (FHE), or zero-knowledge proofs (ZKP). Wikipedia is a great place to start before diving into anything listed below. 
 
 ## Lattice-based Cryptography
-Lattice-based cryptography is a type of [post-quantum crytography](https://en.wikipedia.org/wiki/Post-quantum_cryptography)(i.e. cryptography that is resistant to attacks from a quantum computer) using [lattices](https://en.wikipedia.org/wiki/Lattice_(group)).
+Lattice-based cryptography is a type of [post-quantum crytography](https://en.wikipedia.org/wiki/Post-quantum_cryptography)  (i.e. cryptography that is resistant to attacks from a quantum computer) using [lattices](https://en.wikipedia.org/wiki/Lattice_(group)).
 
 - *[An Introduction to Mathematical Cryptography](https://link.springer.com/book/10.1007/978-1-4939-1711-2)*. See the "Lattices and Cryptography" chapter. This was the first resource I used in undergrad to learn about lattice-based cryptography.
 - [A Decade of Lattice Cryptography](https://web.eecs.umich.edu/~cpeikert/pubs/lattice-survey.pdf). A lot more advanced than the previous resource but thoroughly covers the major aspects of lattice-based cryptography.
