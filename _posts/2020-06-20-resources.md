@@ -20,4 +20,4 @@ I've collected some resources if you're interested in learning more about lattic
 - [Zero Knowledge Proofs: An illustrated primer](https://blog.cryptographyengineering.com/2014/11/27/zero-knowledge-proofs-illustrated-primer/). Fantastic blog post explaining ZKPs. A good starting point.
 - *[Cryptography: An Introduction](https://www.cs.umd.edu/~waa/414-F11/IntroToCrypto.pdf)*. See the "Zero-Knowledge Proofs" chapter.
 - [Simons Institute Proofs, Consensus and Decentralizing Society Bootcamp](https://simons.berkeley.edu/workshops/schedule/9299). Specifically the videos from days 1 and 2.
-- [ZKProof Community Reference](https://docs.zkproof.org/pages/reference/reference.pdf). A very long reference document explaining various technical aspects of ZKPs from [ZKProof](https://zkproof.org/), an intiative to standardize ZKPs.
+- [ZKProof Community Reference](https://docs.zkproof.org/pages/reference/reference.pdf). A very long reference document explaining various technical aspects of ZKPs from [ZKProof](https://zkproof.org/), an intiative to standardize ZKPs. This document is good to look at if you encounter a term you don't know.
