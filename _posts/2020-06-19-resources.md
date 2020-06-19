@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Resources for Lattice Cryptography, Fully Homomorphic Encryption, and Zero-knowledge Proofs"
-date: 2020-06-20
+date: 2020-06-19
 ---
 I've collected some resources if you're interested in learning more about lattice-based cryptography, fully homomorphic encryption (FHE), or zero-knowledge proofs (ZKP). Wikipedia is a great place to start before diving into anything listed below. 
 
