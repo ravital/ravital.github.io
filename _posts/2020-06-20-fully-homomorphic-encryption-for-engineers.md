@@ -119,8 +119,8 @@ If you do not have previous experience with FHE, we recommend starting with a mo
 |  Computational Model                |      Library                                     |  
 | :-----------------------------------: |:------------------------------------------------:|
 |                    [Boolean](#Many-Different-Schemes)          |  [TFHE](https://github.com/tfhe/tfhe), [nuFHE](https://github.com/nucypher/nufhe), [PALISADE](https://gitlab.com/palisade/palisade-release)(tFHE)   |
-| [Modular Arithmetic](#Many-Different-Schemes)                  |   [HElib](https://github.com/homenc/HElib), [SEAL](https://github.com/Microsoft/SEAL)(BFV), [Lattigo](https://github.com/ldsec/lattigo)(BFV), [PALISADE](https://gitlab.com/palisade/palisade-release)(BFV, BGV)  |
-| &nbsp; [Floating Point Arithmetic](#Many-Different-Schemes) &nbsp;          |  &nbsp;  [SEAL](https://github.com/Microsoft/SEAL)(CKKS), [Lattigo](https://github.com/ldsec/lattigo)(CKKS), [PALISADE](https://gitlab.com/palisade/palisade-release)(CKKS)  &nbsp;                                 |
+| [Modular Arithmetic](#Many-Different-Schemes)                  | &nbsp;  [HElib](https://github.com/homenc/HElib), [SEAL](https://github.com/Microsoft/SEAL)(BFV), [Lattigo](https://github.com/ldsec/lattigo)(BFV), [PALISADE](https://gitlab.com/palisade/palisade-release)(BFV, BGV) &nbsp; |
+| &nbsp; [Floating Point Arithmetic](#Many-Different-Schemes) &nbsp;          |  [SEAL](https://github.com/Microsoft/SEAL)(CKKS), [Lattigo](https://github.com/ldsec/lattigo)(CKKS), [PALISADE](https://gitlab.com/palisade/palisade-release)(CKKS)                               |
 
 
 ## References
