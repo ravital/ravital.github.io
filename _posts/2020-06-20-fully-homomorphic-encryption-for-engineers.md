@@ -77,7 +77,7 @@ There a number of different homomorphic encryption schemes (Variety, great!) tha
 | :------------------------:|:-------------:|:------------------------------------------------:|
 |           Boolean         |  Number Comparison  |   TFHE     |
 | Modular Arithmetic        | Integer Arithmetic, Scalar Multiplication   |   BGV, BFV      |
-| Floating Point Arithmetic  |   Polynomial Approximation, Machine Learning Models  |     CKKS          |
+| &nbsp; Floating Point Arithmetic &nbsp;  |  &nbsp; Polynomial Approximation, Machine Learning Models &nbsp;  |     CKKS          |
 
 **Q: Does it matter which scheme I use if it falls under the same category of computational model? (Does it matter which of BGV and BFV I use?)** 
 
