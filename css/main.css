@@ -45,13 +45,13 @@ ul.posts li {
 table{
     border-collapse: collapse;
     border-spacing: 0;
-    border:2px solid #000000;
+    border:2px solid #898A93;
 }
 
 th{
-    border:2px solid #000000;
+    border:2px solid #898A93;
 }
 
 td{
-    border:1px solid #000000;
+    border:1px solid #898A93;
 }
