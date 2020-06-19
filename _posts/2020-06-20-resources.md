@@ -14,7 +14,7 @@ I've collected some resources if you're interested in learning more about lattic
 - [A Brief Survey of Fully Homomorphic Encryption](https://blog.quarkslab.com/a-brief-survey-of-fully-homomorphic-encryption-computing-on-encrypted-data.html). A short post introducting what fully homomorphic encryption is and how it works. A good starting point if you don't know anything about FHE.
 - [Computing Arbitrary Functions of Encrypted Data](https://crypto.stanford.edu/craig/easy-fhe.pdf). A brief but very well-written paper from the Craig Gentry (the 1st person to successfully construct an FHE scheme). More technically involved than the above but provides good intuition for understanding how FHE works.
 - [Fundamentals of Fully Homomorphic Encryption](https://pdfs.semanticscholar.org/e247/ae732c50b6c04b2aa413c4caa0ca77ed4751.pdf). An accessible but longer introduction to FHE.
-- [Microsoft SEAL Examples](https://github.com/microsoft/SEAL/tree/master/native/examples). Allows you to see how FHE works in practice. Does not assume prior knowledge of cryptography. 
+- [Microsoft SEAL Examples](https://github.com/microsoft/SEAL/tree/master/native/examples). Allows you to see how FHE works in practice. Does not assume prior knowledge of cryptography. Probably the most useful resource if you're an engineer.
 
 ## Zero-knowledge Proofs
 - [Zero Knowledge Proofs: An illustrated primer](https://blog.cryptographyengineering.com/2014/11/27/zero-knowledge-proofs-illustrated-primer/). Fantastic blog post explaining ZKPs. A good starting point.
