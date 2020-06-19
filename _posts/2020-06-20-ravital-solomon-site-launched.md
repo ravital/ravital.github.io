@@ -65,7 +65,7 @@ All FHE schemes use a specific type of [post-quantum cryptography](https://en.wi
 
 Simply put, lattices sit inside the real vector space (R^n) and can be represented using vectors and matrices (which you definitely should have familiarity with!). 
 
-## Challenges in the Space (i.e. why FHE hasn't taken off yet)
+## Why FHE Hasn't Taken off Yet: Challenges in the Space
 So far this all sounds great but I've been leaving out a number of problems.
 
 ### 1. Many Different Schemes (aka everyone is speaking a different language)
