@@ -13,7 +13,7 @@ Lattice-based cryptography is a type of [post-quantum crytography](https://en.wi
 - [Simons Institute Lattices Program](https://simons.berkeley.edu/programs/lattices2020). Videos covering everything from the basics of lattices to current research being done today.
 
 ## Fully Homomorphic Encryption
-Fully homomorphic encryption can be viewed as an extension of [public key encryption schemes](https://en.wikipedia.org/wiki/Public-key_cryptography). It allows for arbitrary computations over encrypted data in a "structure-preserving" way.
+Fully homomorphic encryption can be viewed as an extension of [public key encryption schemes](https://en.wikipedia.org/wiki/Public-key_cryptography). It allows for arbitrary computations over encrypted data in a "structure-preserving" way. All FHE schemes use lattice-based cryptography.
 
 - [A Brief Survey of Fully Homomorphic Encryption](https://blog.quarkslab.com/a-brief-survey-of-fully-homomorphic-encryption-computing-on-encrypted-data.html). A short post introducting what fully homomorphic encryption is and how it works. A good starting point if you don't know anything about FHE.
 - [Computing Arbitrary Functions of Encrypted Data](https://crypto.stanford.edu/craig/easy-fhe.pdf). A brief but very well-written paper from the Craig Gentry (the 1st person to successfully construct an FHE scheme). More technically involved than the above but provides good intuition for understanding how FHE works.
@@ -21,7 +21,7 @@ Fully homomorphic encryption can be viewed as an extension of [public key encryp
 - [Microsoft SEAL Examples](https://github.com/microsoft/SEAL/tree/master/native/examples). Allows you to see how FHE works in practice. Does not assume prior knowledge of cryptography. Probably the most useful resource if you're an engineer.
 
 ## Zero-knowledge Proofs
-Zero-knowledge proofs allow you to convince someone (called a Verifier) of some fact without "revealing" any additional information (hence the term "zero-knowledge" because the Verifier learned nothing after the interaction apart from being convinced that the fact was true).
+Zero-knowledge proofs allow you to convince someone (called a "verifier") of some fact without "revealing" any additional information (hence the term "zero-knowledge" because the verifier learned nothing after the interaction apart from being convinced that the fact was true).
 
 - [Zero Knowledge Proofs: An illustrated primer](https://blog.cryptographyengineering.com/2014/11/27/zero-knowledge-proofs-illustrated-primer/). Fantastic blog post explaining ZKPs. A good starting point.
 - *[Cryptography: An Introduction](https://www.cs.umd.edu/~waa/414-F11/IntroToCrypto.pdf)*. See the "Zero-Knowledge Proofs" chapter.
