@@ -74,7 +74,7 @@ There a number of different homomorphic encryption schemes (Variety, great!) tha
 **Different Models for Computation.** FHE schemes can be broken down into 3 types depending on how they model computation (see [this presentation](http://homomorphicencryption.org/wp-content/uploads/2018/10/CCS-HE-Tutorial-Slides.pdf) if interested in more advanced technical details). The first type models computations as **boolean circuits**. The second type models computation as **modular arithmetic** (i.e. "clock" arithmetic). The third and final type models computations as **floating point arithmetic**. 
 
 |  Computational Model      |   Good for      |    Schemes                                    |  
-| ------------------------|:-------------:|------------------------------------------------:|
+| :------------------------:|:-------------:|:------------------------------------------------:|
 |           Boolean         |  Number Comparison  |   TFHE     |
 | Modular Arithmetic        | Integer Arithmetic, Scalar Multiplication   |   BGV, BFV      |
 | Floating Point Arithmetic  |   Polynomial Approximation, Machine Learning Models  |     CKKS          |
@@ -117,7 +117,7 @@ Wading through libraries like [HElib](https://github.com/homenc/HElib) can be in
 If you do not have previous experience with FHE, we recommend starting with a more user-friendly library such as [SEAL](https://github.com/Microsoft/SEAL).
 
 |  Computational Model                |      Library                                     |  
-| ----------------------------------- |------------------------------------------------:|
+| :-----------------------------------: |:------------------------------------------------:|
 |                    [Boolean](#Many-Different-Schemes)          |  [TFHE](https://github.com/tfhe/tfhe), [nuFHE](https://github.com/nucypher/nufhe), [PALISADE](https://gitlab.com/palisade/palisade-release)(tFHE)   |
 | [Modular Arithmetic](#Many-Different-Schemes)                  |   [HElib](https://github.com/homenc/HElib), [SEAL](https://github.com/Microsoft/SEAL)(BFV), [Lattigo](https://github.com/ldsec/lattigo)(BFV), [PALISADE](https://gitlab.com/palisade/palisade-release)(BFV, BGV)  |
 | [Floating Point Arithmetic](#Many-Different-Schemes)           |   [SEAL](https://github.com/Microsoft/SEAL)(CKKS), [Lattigo](https://github.com/ldsec/lattigo)(CKKS), [PALISADE](https://gitlab.com/palisade/palisade-release)(CKKS)                                   |
