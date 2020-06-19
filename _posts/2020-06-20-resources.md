@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Resources for Learning about Lattice-based Cryptography, Homomorphic Encryption, and Zero-knowledge Proofs"
+title: "Resources for Lattice Cryptography, Fully Homomorphic Encryption, and Zero-knowledge Proofs"
 date: 2020-06-20
 ---
 
-# Lattice-based Cryptography
+## Lattice-based Cryptography
 
-# Homomorphic Encryption
+## Homomorphic Encryption
 
-# Zero-knowledge Proofs
+## Zero-knowledge Proofs
