@@ -17,3 +17,5 @@ I've collected some resources if you're interested in learning more about lattic
 - [Microsoft SEAL Examples](https://github.com/microsoft/SEAL/tree/master/native/examples). Allows you to see how FHE works in practice. Does not assume prior knowledge of cryptography. 
 
 ## Zero-knowledge Proofs
+- [Zero Knowledge Proofs: An illustrated primer](https://blog.cryptographyengineering.com/2014/11/27/zero-knowledge-proofs-illustrated-primer/). Fantastic blog post explaining ZKPs. A good starting point.
+- *[Cryptography: An Introduction](https://www.cs.umd.edu/~waa/414-F11/IntroToCrypto.pdf)*, see the "Zero-Knowledge Proofs" chapter.
