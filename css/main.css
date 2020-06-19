@@ -44,7 +44,7 @@ ul.posts li {
 
 table{
     border-collapse: collapse;
-    border-spacing: 0;
+    border-spacing: 1px;
     border:1.5px solid #CCCDD1;
 }
 
