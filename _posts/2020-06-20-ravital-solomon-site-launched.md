@@ -68,7 +68,7 @@ Simply put, lattices sit inside the real vector space (R^n) and can be represent
 ## Challenges in the Space (i.e. why FHE hasn't taken off yet)
 So far this all sounds great but I've been leaving out a number of problems.
 
-### Many Different Schemes
+### 1. Many Different Schemes (aka everyone is speaking a different language)
 There a number of different homomorphic encryption schemes (Variety, great!) that offer various tradeoffs depending on the particular use case. Some popular ones include [BGV], [BFV], [CKKS], and [GSW]. 
 
 **Different Models for Computation.** FHE schemes can be broken down into 3 types depending on how they model computation (see [this presentation](http://homomorphicencryption.org/wp-content/uploads/2018/10/CCS-HE-Tutorial-Slides.pdf) if interested in more advanced technical details). The first type models computations as **boolean circuits**. The second type models computation as **modular arithmetic** (i.e. "clock" arithmetic). The third and final type models computations as **floating point arithmetic**. 
@@ -88,7 +88,7 @@ To add further insult to injury&mdash;yes it does matter and it's generally not 
 2. Ability to move between different FHE schemes. An academic work on this topic is [CHIMERA](https://eprint.iacr.org/2018/758).
 
 
-### Efficiency
+### 2. Efficiency (more complex of an issue than it appears)
 **How many computations do you want to perform?** Some FHE schemes allow you to perform a truly arbitrary number of computations on encrypted data. Many schemes, however, only allow for a certain number of homomorphic operations to be performed (say, for example, we can do 100 sequential homomorphic multiplications). After that point, there's no guarantee decryption will be successful. Say, for example, the FHE scheme only allows for 100 sequential homomorphic multiplications (note: addition is easy in FHE schemes, whereas multiplication is much harder). If we tried to do the 101th homomorphic multiplication, there's no guarantee that the resulting ciphertext can be correctly decrypted. The schemes that allow for a truly arbitrary number of homomorphic computations suffer from very poor performance. If you're able to figure out a ceiling on the number of homomorphic multiplications you want to do, that will help to achieve much better performance.
 
 **How large is your plaintext space?** The larger the plaintext space, the slower it will be to perform operations. 
@@ -99,7 +99,7 @@ To add further insult to injury&mdash;yes it does matter and it's generally not 
 1. Hardware acceleration. Some FHE schemes can be accelerated using GPUs; some examples of such libraries include [nuFHE](https://github.com/nucypher/nufhe) and [cuFHE](https://github.com/vernamlab/cuHE). Other efforts to accelerate FHE schemes have included FPGAs (e.g. [HEEAX](https://arxiv.org/pdf/1909.09731.pdf)).
 
 
-### Ease of Use
+### 3. Ease of Use (honestly, there is none right now)
 Most FHE libraries require deep expertise of the underlying cryptographic scheme to use both correctly and efficiently. Another cryptographer has described working with FHE as similar to writing assembly&mdash; there's a huge difference in performance between good and great implementations.
 
 Wading through libraries like [HElib](https://github.com/homenc/HElib) can be intimidating without a strong background in math/cryptography. 
