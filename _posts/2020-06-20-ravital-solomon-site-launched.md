@@ -4,7 +4,6 @@ title: "Fully Homomorphic Encryption for Engineers"
 date: 2020-06-20
 ---
 
-# Fully Homomorphic Encryption for Engineers
 Fully homomorphic encryption is a game-changing technology that allows for computation over encrypted data. It's relevant to public, distributed ledgers (such as blockchain) and machine learning. Yet, from my own experiences talking to engineers, there's a lack of understanding about what FHE is, and why it's relevant to them. Even more importantly, there's a lack of resources explaining *why* FHE hasn't taken off yet if it's as powerful as described. 
 
 We'll start by providing an introduction to how FHE works and some areas in which it might be useful. The meat of the article, however, is in the 2nd section where we consider why FHE has yet to have received widespread attention and some potential solutions to these issues. Finally, we'll point to some libraries in the space if you're interested in getting your hands dirty.
@@ -38,9 +37,9 @@ Specifically, in a "homomorphic encryption scheme," the following relationships 
 * `Encrypt(a) * Encrypt(b) = Encrypt(a * b)`
 
 Allowing you to do something like:
-` Encrypt(3xy + x) = Encrypt(3xy) + Encrypt(x) = [3 * Encrypt(x) * Encrypt(y)] + Encrypt(x) `
+`Encrypt(3xy + x) = Encrypt(3xy) + Encrypt(x) = [3 * Encrypt(x) * Encrypt(y)] + Encrypt(x)`
 
-So just by knowing ` Encrypt(x) ` and ` Encrypt(y) `, we can compute the encryption of more complicated polynomial expressions.
+So just by knowing `Encrypt(x)` and `Encrypt(y)`, we can compute the encryption of more complicated polynomial expressions.
 
 ### Why do we care about this?
 
@@ -75,7 +74,7 @@ There a number of different homomorphic encryption schemes (Variety, great!) tha
 **Different Models for Computation.** FHE schemes can be broken down into 3 types depending on how they model computation (see [this presentation](http://homomorphicencryption.org/wp-content/uploads/2018/10/CCS-HE-Tutorial-Slides.pdf) if interested in more advanced technical details). The first type models computations as **boolean circuits**. The second type models computation as **modular arithmetic** (i.e. "clock" arithmetic). The third and final type models computations as **floating point arithmetic**. 
 
 |  Computational Model      |   Good for      |    Schemes                                    |  
-| ------------------------  | :-------------: |  ------------------------------------------------:|
+| ------------------------|:-------------:|------------------------------------------------:|
 |           Boolean         |  Number Comparison  |   TFHE     |
 | Modular Arithmetic        | Integer Arithmetic, Scalar Multiplication   |   BGV, BFV      |
 | Floating Point Arithmetic  |   Polynomial Approximation, Machine Learning Models  |     CKKS          |
@@ -118,7 +117,7 @@ Wading through libraries like [HElib](https://github.com/homenc/HElib) can be in
 If you do not have previous experience with FHE, we recommend starting with a more user-friendly library such as [SEAL](https://github.com/Microsoft/SEAL).
 
 |  Computational Model                |      Library                                     |  
-| ----------------------------------- | ------------------------------------------------:|
+| ----------------------------------- |------------------------------------------------:|
 |                    [Boolean](#Many-Different-Schemes)          |  [TFHE](https://github.com/tfhe/tfhe), [nuFHE](https://github.com/nucypher/nufhe), [PALISADE](https://gitlab.com/palisade/palisade-release)(tFHE)   |
 | [Modular Arithmetic](#Many-Different-Schemes)                  |   [HElib](https://github.com/homenc/HElib), [SEAL](https://github.com/Microsoft/SEAL)(BFV), [Lattigo](https://github.com/ldsec/lattigo)(BFV), [PALISADE](https://gitlab.com/palisade/palisade-release)(BFV, BGV)  |
 | [Floating Point Arithmetic](#Many-Different-Schemes)           |   [SEAL](https://github.com/Microsoft/SEAL)(CKKS), [Lattigo](https://github.com/ldsec/lattigo)(CKKS), [PALISADE](https://gitlab.com/palisade/palisade-release)(CKKS)                                   |
