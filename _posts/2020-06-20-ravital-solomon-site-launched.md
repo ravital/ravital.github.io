@@ -20,7 +20,7 @@ Let's start by reviewing encryption schemes briefly.
 **Algorithms in an Encryption Scheme**
 
 An encryption scheme includes the following 3 algorithms:
-* `KeyGen(security parameter)` &rarr; ` (key(s))`: The Key Generation algorithm takes a security parameter as its input. It then outputs the key(s) of the scheme.
+* `KeyGen(security parameter)` &rarr; `(key(s))`: The Key Generation algorithm takes a security parameter as its input. It then outputs the key(s) of the scheme.
 * `Encrypt(plaintext, key, randomness) `&rarr;` (ciphertext)`: The Encryption algorithm take a plaintext (i.e. unencrypted data/data in the clear), a key, and some randomness (encryption must be probabilitistic to be "[secure](https://en.wikipedia.org/wiki/Semantic_security)") as inputs. It then outputs the corresponding ciphertext (i.e. encrypted data).
 * `Decrypt(ciphertext, key)` &rarr; `(plaintext)`: The Decryption algorithm takes a ciphertext and a key as inputs. It outputs the corresponding plaintext. 
 
