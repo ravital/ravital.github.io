@@ -12,7 +12,7 @@ We'll start by providing an introduction to how FHE works and some areas in whic
     * [A Refresher on Public Key Encryption Schemes](#section1)
     * [So what's the "homomorphic" part mean?](#section2)
     * [Why do we care about any of this?](#section3)
-    * [What's needed to build a FHE scheme?](#section4)
+    * [What's needed to build an FHE scheme?](#section4)
 2. [Why FHE hasn't taken off yet](#why)
     * [Many Different Schemes](#section5)
     * [Efficiency](#section6)
