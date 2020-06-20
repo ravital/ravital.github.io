@@ -8,12 +8,24 @@ Fully homomorphic encryption is a mythical technology that allows for computatio
 
 We'll start by providing an introduction to how FHE works and some areas in which it might be useful. The meat of the article, however, is in the 2nd section where we consider why FHE has yet to have received widespread attention and some potential solutions to these issues. Finally, we'll point to some libraries in the space if you're interested in getting your hands dirty.
 
-## What is fully homomorphic encryption?
+1. [What is fully homomorphic encryption?](#introduction)
+    i. [A Refresher on Public Key Encryption Schemes](#section1)
+    ii. [So what's the "homomorphic" part mean?](#section2)
+    iii. [Why do we care about any of this?](#section3)
+    iv. [What's needed to build a FHE scheme?](#section4)
+2. [Why FHE hasn't taken off yet](#why)
+    i. [Many Different Schemes](#section5)
+    ii. [Efficiency](#section6)
+    iii. [Ease of Use](#section7)
+3. [Show me the code!](#code)
+
+
+## What is fully homomorphic encryption? <a name="introduction"></a>
 Fully homomorphic encryption is a type of encryption scheme that allows you to perform arbitrary\* computations on encrypted data. 
 
 \* Not completely true but we'll leave that out for now. 
 
-### A Refresher on Public Key Encryption Schemes
+### A Refresher on Public Key Encryption Schemes <a name="section1"></a>
 Let's start by reviewing encryption schemes briefly. 
 
 **Algorithms in an Encryption Scheme**
@@ -29,7 +41,7 @@ However, in a *public* key encryption scheme, different keys are used to encrypt
 
 You may have heard of the [ElGamal encryption scheme](https://en.wikipedia.org/wiki/ElGamal_encryption) before (which is based on the [Diffie-Hellman key exchange](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange)). These schemes are usually taught in an introductory cryptography course and rely on a commonly used type of cryptography called [elliptic curve cryptography](https://en.wikipedia.org/wiki/Elliptic-curve_cryptography). 
 
-### So what's the "homomorphic" part mean?
+### So what's the "homomorphic" part mean? <a name="section2"></a>
 We will turn our focus to public key encryption schemes as they are the most useful. The homomorphic part implies that there is a special relationship between performing computations in the plaintext space (i.e. all valid plaintexts) vs. ciphertext space (i.e. all valid ciphertexts).
 
 Specifically, in a "homomorphic encryption scheme," the following relationships hold:
@@ -41,7 +53,7 @@ Allowing you to do something like:
 
 So just by knowing `Encrypt(x)` and `Encrypt(y)`, we can compute the encryption of more complicated polynomial expressions.
 
-### Why do we care about this?
+### Why do we care about any of this? <a name="section3"></a>
 
 **Examples**
 
@@ -59,16 +71,16 @@ Note: For this to actually work in practice, some other cryptographic tools are 
 
 *Private Machine Learning.* There's been a increase in interest in the last few years around how we might be able to learn from data (via machine learning) while still maintaining the data's privacy. Homomorphic encryption is not the sole solution to this problem; [differential privacy](https://en.wikipedia.org/wiki/Differential_privacy#:~:text=Differential%20privacy%20is%20a%20system,about%20individuals%20in%20the%20dataset) is a closely related subject.
 
-### What's needed to build a fully homomorphic encryption scheme?
+### What's needed to build a fully homomorphic encryption scheme? <a name="section4"></a>
 
 All FHE schemes use a specific type of [post-quantum cryptography](https://en.wikipedia.org/wiki/Post-quantum_cryptography) called [lattice cryptography](https://en.wikipedia.org/wiki/Lattice-based_cryptography). The good news is that FHE is resistant to attacks from a quantum computer (if we should be concerned about such a thing is an entirely different topic). The bad news is you might have no familiarity with lattice cryptography even if you've taken an introductory cryptography course before. 
 
 Simply put, lattices sit inside the real vector space (R^n) and can be represented using vectors and matrices (which you definitely should have familiarity with!). 
 
-## Why FHE Hasn't Taken off Yet: Challenges in the Space
+## Why FHE Hasn't Taken off Yet: Challenges in the Space <a name="why"></a>
 So far this all sounds great but I've been leaving out a number of problems.
 
-### 1. Many Different Schemes (aka everyone is speaking a different language)
+### 1. Many Different Schemes (aka everyone is speaking a different language) <a name="section5"></a>
 There a number of different homomorphic encryption schemes (Variety, great!) that offer various tradeoffs depending on the particular use case. Some popular ones include [BGV], [BFV], [CKKS], and [GSW]. 
 
 **Different Models for Computation.** FHE schemes can be broken down into 3 types depending on how they model computation (see [this presentation](http://homomorphicencryption.org/wp-content/uploads/2018/10/CCS-HE-Tutorial-Slides.pdf) if interested in more advanced technical details). The first type models computations as **boolean circuits**. The second type models computation as **modular arithmetic** (i.e. "clock" arithmetic). The third and final type models computations as **floating point arithmetic**. 
@@ -88,7 +100,7 @@ To add further insult to injury&mdash;yes it does matter and it's generally not 
 2. Ability to move between different FHE schemes. An academic work on this topic is [CHIMERA](https://eprint.iacr.org/2018/758).
 
 
-### 2. Efficiency (more complex of an issue than it appears)
+### 2. Efficiency (more complex of an issue than it appears) <a name="section6"></a>
 **How many computations do you want to perform?** Some FHE schemes allow you to perform a truly arbitrary number of computations on encrypted data. Many schemes, however, only allow for a certain number of homomorphic operations to be performed (say, for example, we can do 100 sequential homomorphic multiplications). After that point, there's no guarantee decryption will be successful. Say, for example, the FHE scheme only allows for 100 sequential homomorphic multiplications (note: addition is easy in FHE schemes, whereas multiplication is much harder). If we tried to do the 101th homomorphic multiplication, there's no guarantee that the resulting ciphertext can be correctly decrypted. The schemes that allow for a truly arbitrary number of homomorphic computations suffer from very poor performance. If you're able to figure out a ceiling on the number of homomorphic multiplications you want to do, that will help to achieve much better performance.
 
 **How large is your plaintext space?** The larger the plaintext space, the slower it will be to perform operations. 
@@ -99,7 +111,7 @@ To add further insult to injury&mdash;yes it does matter and it's generally not 
 1. Hardware acceleration. Some FHE schemes can be accelerated using GPUs; some examples of such libraries include [nuFHE](https://github.com/nucypher/nufhe) and [cuFHE](https://github.com/vernamlab/cuHE). Other efforts to accelerate FHE schemes have included FPGAs (e.g. [HEEAX](https://arxiv.org/pdf/1909.09731.pdf)).
 
 
-### 3. Ease of Use (there is little, if any, right now)
+### 3. Ease of Use (there is little, if any, right now) <a name="section7"></a>
 Most FHE libraries require deep expertise of the underlying cryptographic scheme to use both correctly and efficiently. Another cryptographer has described working with FHE as similar to writing assembly&mdash; there's a huge difference in performance between good and great implementations.
 
 Wading through libraries like [HElib](https://github.com/homenc/HElib) can be intimidating without a strong background in math/cryptography. 
@@ -112,7 +124,7 @@ Wading through libraries like [HElib](https://github.com/homenc/HElib) can be in
 3. Potential compilers. [Cingulata](https://github.com/CEA-LIST/Cingulata) is one such example. 
 
 
-## Show me the code!
+## Show me the code! <a name="code"></a>
 
 If you do not have previous experience with FHE, we recommend starting with a more user-friendly library such as [SEAL](https://github.com/Microsoft/SEAL).
 
