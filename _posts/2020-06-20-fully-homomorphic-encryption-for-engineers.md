@@ -4,7 +4,7 @@ title: "Fully Homomorphic Encryption for Engineers"
 date: 2020-06-20
 ---
 
-Fully homomorphic encryption is a game-changing technology that allows for computation over encrypted data. It's relevant to public, distributed ledgers (such as blockchain) and machine learning. Yet, from my own experiences talking to engineers, there's a lack of understanding about what FHE is, and why it's relevant to them. Even more importantly, there's a lack of resources explaining *why* FHE hasn't taken off yet if it's as powerful as described. 
+Fully homomorphic encryption is a mythical technology that allows for computation over encrypted data. It's relevant to public, distributed ledgers (such as blockchain) and machine learning. Yet, from my own experiences talking to engineers, there's a lack of understanding about what FHE is, and why it's relevant to them. Even more importantly, there's a lack of resources explaining *why* FHE hasn't taken off yet if it's as powerful as described. 
 
 We'll start by providing an introduction to how FHE works and some areas in which it might be useful. The meat of the article, however, is in the 2nd section where we consider why FHE has yet to have received widespread attention and some potential solutions to these issues. Finally, we'll point to some libraries in the space if you're interested in getting your hands dirty.
 
@@ -99,7 +99,7 @@ To add further insult to injury&mdash;yes it does matter and it's generally not 
 1. Hardware acceleration. Some FHE schemes can be accelerated using GPUs; some examples of such libraries include [nuFHE](https://github.com/nucypher/nufhe) and [cuFHE](https://github.com/vernamlab/cuHE). Other efforts to accelerate FHE schemes have included FPGAs (e.g. [HEEAX](https://arxiv.org/pdf/1909.09731.pdf)).
 
 
-### 3. Ease of Use (honestly, there is none right now)
+### 3. Ease of Use (there is little, if any, right now)
 Most FHE libraries require deep expertise of the underlying cryptographic scheme to use both correctly and efficiently. Another cryptographer has described working with FHE as similar to writing assembly&mdash; there's a huge difference in performance between good and great implementations.
 
 Wading through libraries like [HElib](https://github.com/homenc/HElib) can be intimidating without a strong background in math/cryptography. 
