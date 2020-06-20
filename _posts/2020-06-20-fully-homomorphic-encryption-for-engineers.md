@@ -9,14 +9,14 @@ Fully homomorphic encryption is a mythical technology that allows for computatio
 We'll start by providing an introduction to how FHE works and some areas in which it might be useful. The meat of the article, however, is in the 2nd section where we consider why FHE has yet to have received widespread attention and some potential solutions to these issues. Finally, we'll point to some libraries in the space if you're interested in getting your hands dirty.
 
 1. [What is fully homomorphic encryption?](#introduction)
-    i. [A Refresher on Public Key Encryption Schemes](#section1)
-    ii. [So what's the "homomorphic" part mean?](#section2)
-    iii. [Why do we care about any of this?](#section3)
-    iv. [What's needed to build a FHE scheme?](#section4)
+    * [A Refresher on Public Key Encryption Schemes](#section1)
+    * [So what's the "homomorphic" part mean?](#section2)
+    * [Why do we care about any of this?](#section3)
+    * [What's needed to build a FHE scheme?](#section4)
 2. [Why FHE hasn't taken off yet](#why)
-    i. [Many Different Schemes](#section5)
-    ii. [Efficiency](#section6)
-    iii. [Ease of Use](#section7)
+    * [Many Different Schemes](#section5)
+    * [Efficiency](#section6)
+    * [Ease of Use](#section7)
 3. [Show me the code!](#code)
 
 
