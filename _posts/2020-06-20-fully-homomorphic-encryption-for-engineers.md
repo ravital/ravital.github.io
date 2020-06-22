@@ -4,7 +4,7 @@ title: "Fully Homomorphic Encryption for Engineers [WIP]"
 date: 2020-06-20
 ---
 
-Fully homomorphic encryption is a fabled technology (at least in the cryptography community) that allows for arbitrary computation over encrypted data. With privacy as a major focus across tech, fully homomorphic encryption (FHE) fits perfectly into the new narrative. FHE is relevant to public, distributed ledgers (such as blockchain) and machine learning.
+Fully homomorphic encryption is a fabled technology (at least in the cryptography community) that allows for arbitrary computation over encrypted data. With privacy as a major focus across tech, fully homomorphic encryption (FHE) fits perfectly into this new narrative. FHE is relevant to public, distributed ledgers (such as blockchain) and machine learning.
 
 The 1st FHE scheme was successfully created in 2009 by Craig Gentry. Since then, there have been numerous proposed FHE schemes and a dearth of related work in the space. However, there's little explanation as to *why* all this work is being done or the motivation for any of it. When I first started learning about FHE, I had many questions: Why are there so many schemes? Is FHE being used in any major application right now? If FHE is as powerful as described, why hasn't it taken off yet?
 
