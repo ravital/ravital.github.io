@@ -67,7 +67,7 @@ FHE schemes can be broken down into 3 types depending on how they model computat
 | ------------------------  | :-------------: |  ------------------------------------------------:|
 |           Boolean         |  Number Comparison  |   [TFHE](https://eprint.iacr.org/2016/870.pdf)     |
 | Modular Arithmetic        | Integer Arithmetic, Scalar Multiplication   |   [BGV](https://eprint.iacr.org/2011/277.pdf), [BFV](https://eprint.iacr.org/2012/144)      |
-| Floating Point Arithmetic  |   Polynomial Approximation, Machine Learning Models  |     [CKKS](https://eprint.iacr.org/2016/421.pdf)          |
+| &nbsp; Floating Point Arithmetic &nbsp; |   &nbsp; Polynomial Approximation, Machine Learning Models &nbsp;  |     [CKKS](https://eprint.iacr.org/2016/421.pdf)          |
 
 The names of these schemes usually come from the last names of the authors who created it. For example, "BGV" comes from the authors Brakerski, Gentry, and Vaikuntanathan.
 
