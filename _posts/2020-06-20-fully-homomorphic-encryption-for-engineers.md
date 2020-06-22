@@ -28,7 +28,7 @@ Fully homomorphic encryption is a type of encryption scheme that allows you to p
 \* Not completely true but we'll leave that out for now. 
 
 ### A Refresher on Public Key Encryption Schemes <a name="section1"></a>
-Let's start with a brief review of encryption schemes. *Plaintext* is data in the clear/unecrypted data whereas *ciphertext* is encrypted data.
+Let's start with a brief review of encryption schemes. *Plaintext* is data in the clear/unecrypted data, whereas *ciphertext* is encrypted data.
 
 **Algorithms in an Encryption Scheme**
 
