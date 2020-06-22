@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Fully Homomorphic Encryption for Engineers"
+title: "Fully Homomorphic Encryption for Engineers [WIP]"
 date: 2020-06-20
 ---
 
