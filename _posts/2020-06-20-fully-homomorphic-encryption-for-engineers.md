@@ -44,7 +44,7 @@ However, in a *public* key encryption scheme, different keys are used to encrypt
 You may have heard of the [ElGamal encryption scheme](https://en.wikipedia.org/wiki/ElGamal_encryption) before (which is based on the [Diffie-Hellman key exchange](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange)). These schemes are usually taught in an introductory cryptography course and rely on a commonly used type of cryptography called [elliptic curve cryptography](https://en.wikipedia.org/wiki/Elliptic-curve_cryptography). 
 
 ### So what's the "homomorphic" part mean? <a name="section2"></a>
-We will turn our focus to public key encryption schemes as they are the most useful. The homomorphic part implies that there is a special relationship between performing computations in the plaintext space (i.e. all valid plaintexts) vs. ciphertext space (i.e. all valid ciphertexts).
+We will turn our focus to public key homomorphic encryption schemes as they are the most useful. The homomorphic part implies that there is a special relationship between performing computations in the plaintext space (i.e. all valid plaintexts) vs. ciphertext space (i.e. all valid ciphertexts).
 
 Specifically, in a "homomorphic encryption scheme," the following relationships hold:
 * `Encrypt(a) + Encrypt(b) = Encrypt(a + b)`
