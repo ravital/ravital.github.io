@@ -79,9 +79,9 @@ Simply put, lattices sit inside the real vector space (otherwise known as R^n) a
 FHE schemes can be broken down into 3 types depending on how they model computation (see [this presentation](http://homomorphicencryption.org/wp-content/uploads/2018/10/CCS-HE-Tutorial-Slides.pdf) if interested in more advanced technical details). The first type models computations as **boolean circuits** (i.e. bits). The second type models computation as **modular arithmetic** (i.e. "clock" arithmetic). The third and final type models computations as **floating point arithmetic**. 
 
 |  Computational Model      |   Good for      |    Schemes\*                                    |  
-| ------------------------  | :-------------: |  ------------------------------------------------:|
+| :------------------------:  | :-------------: |  :------------------------------------------------:|
 |           Boolean         |  Number Comparison  |   [TFHE](https://eprint.iacr.org/2016/870.pdf)     |
-| Modular Arithmetic        | Integer Arithmetic, Scalar Multiplication   |  &nbsp;  [BGV](https://eprint.iacr.org/2011/277.pdf), [BFV](https://eprint.iacr.org/2012/144)  &nbsp;     |
+| Modular Arithmetic        | Integer Arithmetic, Scalar Multiplication   |  &nbsp;  [BGV](https://eprint.iacr.org/2011/277.pdf), [BFV](https://eprint.iacr.org/2012/144)  &nbsp;   |
 |&nbsp; Floating Point Arithmetic &nbsp; |  &nbsp; Polynomial Approximation, Machine Learning Models &nbsp;   |     [CKKS](https://eprint.iacr.org/2016/421.pdf)          |
 
 The names of these schemes usually come from the last names of the authors who created it. For example, "BGV" comes from the authors Brakerski, Gentry, and Vaikuntanathan.
