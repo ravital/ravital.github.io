@@ -4,6 +4,8 @@ title: "Fully Homomorphic Encryption for Engineers [WIP]"
 date: 2020-07-06
 ---
 
+*Note: This article was originally written for NuCypher.*
+
 Fully homomorphic encryption is a fabled technology (at least in the cryptography community) that allows for arbitrary computation over encrypted data. With privacy as a major focus across tech, fully homomorphic encryption (FHE) fits perfectly into this new narrative. FHE is relevant to public distributed ledgers (such as blockchain) and machine learning.
 
 The first FHE scheme was successfully created in 2009 by Craig Gentry. Since then, there have been numerous proposed FHE schemes and a dearth of related work in the space. However, there's little explanation as to *why* all this work is being done or the motivation for any of it. When I first started learning about FHE, I had many questions: Why are there so many schemes? Is FHE being used in any major application right now? If FHE is as powerful as described, why hasn't it taken off yet?
@@ -235,10 +237,8 @@ If you do not have previous experience with FHE, we recommend starting with a mo
 Some libraries (such as SEAL and PALISADE) offer multiple types of FHE schemes. To prevent confusion, we list the specific FHE scheme in paratheses after the library's name.
 
 |  Computational Model                |      Available Libraries                                     |  
-| ----------------------------------- | ------------------------------------------------:|
+| :-----------------------------------: | :------------------------------------------------:|
 |                    Boolean        |  [TFHE](https://github.com/tfhe/tfhe), [nuFHE](https://github.com/nucypher/nufhe), [PALISADE](https://gitlab.com/palisade/palisade-release)(tFHE)   |
-| Modular Arithmetic                 |   [HElib](https://github.com/homenc/HElib), [SEAL](https://github.com/Microsoft/SEAL)(BFV), [Lattigo](https://github.com/ldsec/lattigo)(BFV), [PALISADE](https://gitlab.com/palisade/palisade-release)(BFV, BGV)  |
-| Floating Point Arithmetic           |   [SEAL](https://github.com/Microsoft/SEAL)(CKKS), [Lattigo](https://github.com/ldsec/lattigo)(CKKS), [PALISADE](https://gitlab.com/palisade/palisade-release)(CKKS)                                   |
+| Modular Arithmetic                 |  &nbsp; [HElib](https://github.com/homenc/HElib), [SEAL](https://github.com/Microsoft/SEAL)(BFV), [Lattigo](https://github.com/ldsec/lattigo)(BFV), [PALISADE](https://gitlab.com/palisade/palisade-release)(BFV, BGV) &nbsp; |
+| &nbsp; Floating Point Arithmetic  &nbsp;     |   [SEAL](https://github.com/Microsoft/SEAL)(CKKS), [Lattigo](https://github.com/ldsec/lattigo)(CKKS), [PALISADE](https://gitlab.com/palisade/palisade-release)(CKKS)                                   |
 
-
-## References
