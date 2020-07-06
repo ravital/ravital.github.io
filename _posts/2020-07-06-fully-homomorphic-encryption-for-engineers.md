@@ -251,3 +251,4 @@ Some libraries (such as SEAL and PALISADE) offer multiple types of FHE schemes. 
 | Modular Arithmetic                 |  &nbsp; [HElib](https://github.com/homenc/HElib), [SEAL](https://github.com/Microsoft/SEAL)(BFV), [Lattigo](https://github.com/ldsec/lattigo)(BFV), [PALISADE](https://gitlab.com/palisade/palisade-release)(BFV, BGV) &nbsp; |
 | &nbsp; Floating Point Arithmetic  &nbsp;     |   [SEAL](https://github.com/Microsoft/SEAL)(CKKS), [Lattigo](https://github.com/ldsec/lattigo)(CKKS), [PALISADE](https://gitlab.com/palisade/palisade-release)(CKKS)                                   |
 
+&nbsp;
