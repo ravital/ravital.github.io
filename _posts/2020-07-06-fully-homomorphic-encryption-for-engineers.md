@@ -166,21 +166,28 @@ If you talk to most people familiar with FHE and ask them why FHE isn't being us
 Personal rant aside, we're going to look at some considerations you have to take into account for efficiency with FHE.
 
 **How many computations do you want to perform?** 
+
 Some FHE schemes allow you to perform a *truly arbitrary* number of computations on encrypted data. Many schemes, however, only allow for a certain number of homomorphic operations to be performed. After that point, there's no guarantee decryption will be successful. Say, for example, the FHE scheme only allows for 100 sequential homomorphic multiplications (note: addition is generally "easy" in FHE schemes, whereas multiplication is much harder). If we tried to do the 101th homomorphic multiplication, there's no guarantee that the resulting ciphertext can be correctly decrypted. The schemes that allow for a truly arbitrary number of homomorphic computations suffer from very poor performance. If you're able to figure out a ceiling on the number of homomorphic multiplications you need to do, that will help to achieve much better performance.
 
-**How big do you need your plaintext space to be?** T
+**How big do you need your plaintext space to be?** 
+
 he larger the plaintext space, the slower it will be to perform operations. For FHE schemes that model computation as modular arithmetic, choosing a modulus on the order of 1000 vs. 1,000,000 makes a large difference in terms of what plaintexts you can represent. This might be especially important if you're representing account balances with your ciphertexts and need to ensure they don't "wrap around" the modulus.
 
 **Are you going to perform the same operation on many different plaintexts or ciphertexts (i.e. "SIMD" style computations)?**
+
 Some FHE schemes can take advantage of "SIMD" style operations to perform the same operation on multiple plaintexts or ciphertexts simultaneously. If this sort of parallelization is useful for you, you should consider exploring schemes and libraries that offer this functionality. SIMD-style operations, if used correctly, can really improve efficiency.
 
 **What key sizes are acceptable to you?** 
+
 With [TFHE](https://eprint.iacr.org/2018/421.pdf), for example, some keys you'll need to access in the scheme can be 1 GB large! The performance, in terms of timings, may be decent but you're instead left with a giant key you need to store.
 
 **Are you okay with large ciphertexts?**
+
 Ciphertext expansion can be quite bad when working with FHE. Looking again at [TFHE](https://eprint.iacr.org/2018/421.pdf), the plaintext-to-ciphertext expansion is 10,000:1 for an acceptable level of security (100 bits).
 
-**What matters most for you in terms of performance?** You can't "have it all" in FHE so it's important to determine what you *need* vs. *want*. Maybe you really need fast comparison of numbers. Maybe you really need to parallelize computation. Maybe you need a large plaintext space. All these little considerations need to be taken into account when choosing an FHE scheme.
+**What matters most for you in terms of performance?** 
+
+You can't "have it all" in FHE so it's important to determine what you *need* vs. *want*. Maybe you really need fast comparison of numbers. Maybe you really need to parallelize computation. Maybe you need a large plaintext space. All these little considerations need to be taken into account when choosing an FHE scheme.
 
 **Potential Solutions:**
 
@@ -197,7 +204,7 @@ The previous discussion leads us to our final point&mdash;usability. FHE is *not
 
 Most FHE libraries require deep expertise of the underlying cryptographic scheme to use both correctly and efficiently. Another cryptographer has described working with FHE as similar to writing assembly&mdash; there's a huge difference in performance between good and great implementations. Wading through libraries like [HElib](https://github.com/homenc/HElib) can be intimidating without a strong background in the underlying scheme.
 
-> Is the situation really that bad?
+**Is the situation really that bad?**
 
 We'll briefly touch on the issues that make FHE exceptionally user-*un*friendly.
 
@@ -206,7 +213,7 @@ We'll briefly touch on the issues that make FHE exceptionally user-*un*friendly.
 * To develop good intuition, you need to work with the scheme....but some libraries have very little documentation.
 * Understanding one type of scheme may not transfer very well to understanding a different type of scheme (by type here, I'm referring to the three different computational models).
 
-> So...am I ready to go use FHE now?
+**So...am I ready to go use FHE now?**
 
 Probably not, but you're definitely ready to look at some libraries!
 
