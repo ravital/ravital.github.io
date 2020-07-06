@@ -118,11 +118,11 @@ So far this all sounds great but I've been leaving out a number of problems.
 ### Many Different Schemes (aka everyone is speaking a different language) <a name="why1"></a>
 So you've decided you want to use FHE, great! Here's some considerations that now need to be taken into account:
 
-**How do I model computation?**
+* **How do I model computation?**
 
 FHE schemes model computation in one of three ways&mdash;as boolean circuits, modular arithmetic, or floating point arithmetic. Hopefully it's obvious which model you need since there aren't many resources beyond introductory ones like [this](http://homomorphicencryption.org/wp-content/uploads/2018/10/CCS-HE-Tutorial-Slides.pdf) to help you out. This question is likely the least of your concerns though.
 
-**What if I have multiple options for FHE schemes that fall under the same computational model I need (e.g. choosing between BGV vs. BFV for modular arithmetic)?**
+* **What if I have multiple options for FHE schemes that fall under the same computational model I need (e.g. choosing between BGV vs. BFV for modular arithmetic)?**
 
 Hmm, that's unfortunate. There isn't much work explaining the tradeoffs between different schemes with the same computational model. You'll probably have to play around with the various schemes and implement your specific use case with both of them to determine which is best. There are some very involved research papers (such as [this](https://eprint.iacr.org/2019/493.pdf)) that you can try wading through.
 
