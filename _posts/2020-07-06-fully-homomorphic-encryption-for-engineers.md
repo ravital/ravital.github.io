@@ -39,7 +39,7 @@ Let's start with a brief review of encryption schemes. *Plaintext* is data in th
 
 An encryption scheme includes the following 3 algorithms:
 * `KeyGen(...security_parameters)` &rarr; `keys`: The Key Generation algorithm takes some security parameter(s) as its input. It then outputs the key(s) of the scheme.
-* `Encrypt(plaintext, key, randomness)` &rarr;`ciphertext`: The Encryption algorithm take a plaintext, a key, and some randomness (encryption must be probabilitistic to be "[secure](https://en.wikipedia.org/wiki/Semantic_security)") as inputs. It then outputs the corresponding ciphertext (i.e. encrypted data).
+* `Encrypt(plaintext, key, randomness)` &rarr; `ciphertext`: The Encryption algorithm take a plaintext, a key, and some randomness (encryption must be probabilitistic to be "[secure](https://en.wikipedia.org/wiki/Semantic_security)") as inputs. It then outputs the corresponding ciphertext (i.e. encrypted data).
 * `Decrypt(ciphertext, key)` &rarr; `plaintext`: The Decryption algorithm takes a ciphertext and a key as inputs. It outputs the corresponding plaintext. 
 
 In a *private* key encryption scheme, the same `key` is used to both encrypt and decrypt. That means anyone who can encrypt plaintext (i.e. data in the clear) can also decrypt ciphertext (i.e. encrypted data). These types of encryption schemes are also referred to as "symmetric" since the relationship between encryption/decryption is symmetric. 
