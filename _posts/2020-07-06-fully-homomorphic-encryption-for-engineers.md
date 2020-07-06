@@ -130,8 +130,7 @@ Kind of but not really. Different schemes tend to use different techniques to co
 > Are the different schemes compatible at all?
 
 Does this picture\* help?
-<p align="center"><img src="https://ravital.github.io/chimera.png" width="700" height="412">
-
+<p align="center"><img src="https://ravital.github.io/chimera.png" width="700" height="412"></p>
 
 Probably not unless you know quite a bit of math and cryptography. There is a relationship between some of the FHE schemes but to understand the relationship you also need to understand how the various FHE schemes work in detail.
 
