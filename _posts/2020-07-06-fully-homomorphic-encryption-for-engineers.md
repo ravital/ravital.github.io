@@ -237,7 +237,6 @@ You know that cliche breakup line "it's not you, it's me?" Well, that's particul
 
 High-level programming languages have helped to abstract away a lot of the complexity of how your computer works. But there is no analogue of "high-level programming languages" when working with FHE. You *can't* abstract away any of the complexities (of which there are *a lot*).  Although standardization is ongoing and there are efforts to make FHE more beginner-friendly, FHE just isn't ready to be used by non-cryptographers at the moment in a production-ready environment. 
 
-I'm very bullish about FHE's future but, right now, the cryptography community needs to work on making FHE more usable for others and improving its efficiency (of course). 
 
 ## Show me the code! <a name="code"></a>
 
