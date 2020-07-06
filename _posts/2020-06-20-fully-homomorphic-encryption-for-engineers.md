@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Fully Homomorphic Encryption for Engineers [WIP]"
-date: 2020-06-20
+date: 2020-07-06
 ---
 
 Fully homomorphic encryption is a fabled technology (at least in the cryptography community) that allows for arbitrary computation over encrypted data. With privacy as a major focus across tech, fully homomorphic encryption (FHE) fits perfectly into this new narrative. FHE is relevant to public distributed ledgers (such as blockchain) and machine learning.
