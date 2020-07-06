@@ -15,8 +15,9 @@ Finally, we'll point to some libraries in the space if you're interested in gett
 1. [What is fully homomorphic encryption?](#introduction)
     * [A Refresher on Public Key Encryption Schemes](#intro1)
     * [So what's the "homomorphic" part mean?](#intro2)
-    * [What's needed to build an FHE scheme?](#section3)
-    * [Why do we care about any of this?](#section4)
+    * [How does it work? What's the intuition?](#intro3)
+    * [What's needed to build an FHE scheme?](#intro4)
+    * [Why do we care about any of this?](#intro5)
 2. [Why FHE hasn't taken off yet](#why)
     * [Many Different Schemes](#section5)
     * [Efficiency](#section6)
@@ -35,9 +36,9 @@ Let's start with a brief review of encryption schemes. *Plaintext* is data in th
 **Algorithms in an Encryption Scheme**
 
 An encryption scheme includes the following 3 algorithms:
-* `KeyGen(security parameter(s))` &rarr; `(key(s))`: The Key Generation algorithm takes some security parameter(s) as its input. It then outputs the key(s) of the scheme.
-* `Encrypt(plaintext, key, randomness)` &rarr;`(ciphertext)`: The Encryption algorithm take a plaintext, a key, and some randomness (encryption must be probabilitistic to be "[secure](https://en.wikipedia.org/wiki/Semantic_security)") as inputs. It then outputs the corresponding ciphertext (i.e. encrypted data).
-* `Decrypt(ciphertext, key)` &rarr; `(plaintext)`: The Decryption algorithm takes a ciphertext and a key as inputs. It outputs the corresponding plaintext. 
+* `KeyGen(...security_parameters)` &rarr; `keys`: The Key Generation algorithm takes some security parameter(s) as its input. It then outputs the key(s) of the scheme.
+* `Encrypt(plaintext, key, randomness)` &rarr;`ciphertext`: The Encryption algorithm take a plaintext, a key, and some randomness (encryption must be probabilitistic to be "[secure](https://en.wikipedia.org/wiki/Semantic_security)") as inputs. It then outputs the corresponding ciphertext (i.e. encrypted data).
+* `Decrypt(ciphertext, key)` &rarr; `plaintext`: The Decryption algorithm takes a ciphertext and a key as inputs. It outputs the corresponding plaintext. 
 
 In a *private* key encryption scheme, the same `key` is used to both encrypt and decrypt. That means anyone who can encrypt plaintext (i.e. data in the clear) can also decrypt ciphertext (i.e. encrypted data). These types of encryption schemes are also referred to as "symmetric" since the relationship between encryption/decryption is symmetric. 
 
@@ -53,9 +54,9 @@ Specifically, in a "homomorphic encryption scheme," the following relationships 
 * **Homomorphic multiplication**: `Encrypt(a) * Encrypt(b) = Encrypt(a * b)`
 
 Allowing you to do something like:
-` Encrypt(3xy + x) = Encrypt(3xy) + Encrypt(x) = [3 * Encrypt(x) * Encrypt(y)] + Encrypt(x) `
+`Encrypt(3xy + x) = Encrypt(3xy) + Encrypt(x) = [3 * Encrypt(x) * Encrypt(y)] + Encrypt(x)`
 
-So just by knowing ` Encrypt(x) ` and ` Encrypt(y) `, we can compute the encryption of more complicated polynomial expressions.
+So just by knowing `Encrypt(x)` and `Encrypt(y)`, we can compute the encryption of more complicated polynomial expressions.
 
 ### How does it work? What's the intuition? <a name="intro3"></a>
 
