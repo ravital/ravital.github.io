@@ -12,7 +12,7 @@ The first FHE scheme was successfully created in 2009 by Craig Gentry. Since the
 
 We'll start by providing an introduction to how FHE works and some areas in which it might be useful. The meat of the article is in the 2nd section where we consider *why* FHE has yet to have received widespread attention and some potential solutions to these issues. The TL;DR of it is that there is a complete *lack of usability* when working with FHE libraries currently. All of the inner workings and complexities of the FHE scheme&mdash;of which there are *many*&mdash;is exposed to the engineer.
 
-Finally, we'll point to some libraries in the space if you're interested in getting your hands dirty.
+Finally, we'll link to some libraries in the space if you're interested in getting your hands dirty.
 
 1. [What is fully homomorphic encryption?](#introduction)
     * [A Refresher on Public Key Encryption Schemes](#intro1)
