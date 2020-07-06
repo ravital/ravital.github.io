@@ -21,10 +21,11 @@ Finally, we'll point to some libraries in the space if you're interested in gett
     * [What's needed to build an FHE scheme?](#intro4)
     * [Why do we care about any of this?](#intro5)
 2. [Why FHE hasn't taken off yet](#why)
-    * [Many Different Schemes](#section5)
-    * [Efficiency](#section6)
-    * [Ease of Use](#section7)
-3. [Show me the code!](#code)
+    * [Many Different Schemes](#why1)
+    * [Efficiency](#why2)
+    * [Usability](#why3)
+3. [What's the takeaway from all of this?](#conclusion)
+4. [Show me the code!](#code)
 
 
 ## What is fully homomorphic encryption? <a name="introduction"></a>
