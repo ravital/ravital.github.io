@@ -118,19 +118,19 @@ So far this all sounds great but I've been leaving out a number of problems.
 ### Many Different Schemes (aka everyone is speaking a different language) <a name="why1"></a>
 So you've decided you want to use FHE, great! Here's some considerations that now need to be taken into account:
 
-> How do I model computation?
+**How do I model computation?**
 
 FHE schemes model computation in one of three ways&mdash;as boolean circuits, modular arithmetic, or floating point arithmetic. Hopefully it's obvious which model you need since there aren't many resources beyond introductory ones like [this](http://homomorphicencryption.org/wp-content/uploads/2018/10/CCS-HE-Tutorial-Slides.pdf) to help you out. This question is likely the least of your concerns though.
 
-> What if I have multiple options for FHE schemes that fall under the same computational model I need (e.g. choosing between BGV vs. BFV for modular arithmetic)?
+**What if I have multiple options for FHE schemes that fall under the same computational model I need (e.g. choosing between BGV vs. BFV for modular arithmetic)?**
 
 Hmm, that's unfortunate. There isn't much work explaining the tradeoffs between different schemes with the same computational model. You'll probably have to play around with the various schemes and implement your specific use case with both of them to determine which is best. There are some very involved research papers (such as [this](https://eprint.iacr.org/2019/493.pdf)) that you can try wading through.
 
-> Do schemes based on different computational models otherwise behave the same?
+**Do schemes based on different computational models otherwise behave the same?**
 
 Kind of but not really. Different schemes tend to use different techniques to control efficiency and noise growth that you'll need to understand to successfully work with FHE. Additionally, the schemes have different parameters you need to understand in order to set them properly. The parameters affect not only the security of the scheme (which is a given in cryptography), but also the sorts of plaintexts you can work with, the number of homomorphic computations you can do, and the overall performance of the scheme.
 
-> Are the different schemes compatible at all?
+**Are the different schemes compatible at all?**
 
 Does this picture\* help?
 <p align="center"><img src="https://ravital.github.io/chimera.png" width="700" height="412"></p>
@@ -165,15 +165,20 @@ If you talk to most people familiar with FHE and ask them why FHE isn't being us
 
 Personal rant aside, we're going to look at some considerations you have to take into account for efficiency with FHE.
 
-**How many computations do you want to perform?** Some FHE schemes allow you to perform a *truly arbitrary* number of computations on encrypted data. Many schemes, however, only allow for a certain number of homomorphic operations to be performed. After that point, there's no guarantee decryption will be successful. Say, for example, the FHE scheme only allows for 100 sequential homomorphic multiplications (note: addition is generally "easy" in FHE schemes, whereas multiplication is much harder). If we tried to do the 101th homomorphic multiplication, there's no guarantee that the resulting ciphertext can be correctly decrypted. The schemes that allow for a truly arbitrary number of homomorphic computations suffer from very poor performance. If you're able to figure out a ceiling on the number of homomorphic multiplications you need to do, that will help to achieve much better performance.
+**How many computations do you want to perform?** 
+Some FHE schemes allow you to perform a *truly arbitrary* number of computations on encrypted data. Many schemes, however, only allow for a certain number of homomorphic operations to be performed. After that point, there's no guarantee decryption will be successful. Say, for example, the FHE scheme only allows for 100 sequential homomorphic multiplications (note: addition is generally "easy" in FHE schemes, whereas multiplication is much harder). If we tried to do the 101th homomorphic multiplication, there's no guarantee that the resulting ciphertext can be correctly decrypted. The schemes that allow for a truly arbitrary number of homomorphic computations suffer from very poor performance. If you're able to figure out a ceiling on the number of homomorphic multiplications you need to do, that will help to achieve much better performance.
 
-**How big do you need your plaintext space to be?** The larger the plaintext space, the slower it will be to perform operations. For FHE schemes that model computation as modular arithmetic, choosing a modulus on the order of 1000 vs. 1,000,000 makes a large difference in terms of what plaintexts you can represent. This might be especially important if you're representing account balances with your ciphertexts and need to ensure they don't "wrap around" the modulus.
+**How big do you need your plaintext space to be?** T
+he larger the plaintext space, the slower it will be to perform operations. For FHE schemes that model computation as modular arithmetic, choosing a modulus on the order of 1000 vs. 1,000,000 makes a large difference in terms of what plaintexts you can represent. This might be especially important if you're representing account balances with your ciphertexts and need to ensure they don't "wrap around" the modulus.
 
-**Are you going to perform the same operation on many different plaintexts or ciphertexts (i.e. "SIMD" style computations)?** Some FHE schemes can take advantage of "SIMD" style operations to perform the same operation on multiple plaintexts or ciphertexts simultaneously. If this sort of parallelization is useful for you, you should consider exploring schemes and libraries that offer this functionality. SIMD-style operations, if used correctly, can really improve efficiency.
+**Are you going to perform the same operation on many different plaintexts or ciphertexts (i.e. "SIMD" style computations)?**
+Some FHE schemes can take advantage of "SIMD" style operations to perform the same operation on multiple plaintexts or ciphertexts simultaneously. If this sort of parallelization is useful for you, you should consider exploring schemes and libraries that offer this functionality. SIMD-style operations, if used correctly, can really improve efficiency.
 
-**What key sizes are acceptable to you?** With [TFHE](https://eprint.iacr.org/2018/421.pdf), for example, some keys you'll need to access in the scheme can be 1 GB large! The performance, in terms of timings, may be decent but you're instead left with a giant key you need to store.
+**What key sizes are acceptable to you?** 
+With [TFHE](https://eprint.iacr.org/2018/421.pdf), for example, some keys you'll need to access in the scheme can be 1 GB large! The performance, in terms of timings, may be decent but you're instead left with a giant key you need to store.
 
-**Are you okay with large ciphertexts?** Ciphertext expansion can be quite bad when working with FHE. Looking again at [TFHE](https://eprint.iacr.org/2018/421.pdf), the plaintext-to-ciphertext expansion is 10,000:1 for an acceptable level of security (100 bits).
+**Are you okay with large ciphertexts?**
+Ciphertext expansion can be quite bad when working with FHE. Looking again at [TFHE](https://eprint.iacr.org/2018/421.pdf), the plaintext-to-ciphertext expansion is 10,000:1 for an acceptable level of security (100 bits).
 
 **What matters most for you in terms of performance?** You can't "have it all" in FHE so it's important to determine what you *need* vs. *want*. Maybe you really need fast comparison of numbers. Maybe you really need to parallelize computation. Maybe you need a large plaintext space. All these little considerations need to be taken into account when choosing an FHE scheme.
 
@@ -223,7 +228,7 @@ There have been discussions in the FHE community for awhile now about creating a
 
 ## What's the takeaway from all of this? <a name="conclusion"></a>
 
-> **It's not you, it's FHE.**
+**It's not you, it's FHE.**
 
 You know that cliche breakup line "it's not you, it's me?" Well, that's particularly true here. 
 
